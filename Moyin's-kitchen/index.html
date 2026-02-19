@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chuks Kitchen</title>
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+
+    <!-- GLOBAL TOP NAV (reused across screens) -->
+    <header class="topnav">
+        <div class="container topnav__inner">
+            <a class="brandLogo" href="#welcome">Moyin Kitchen</a>
+
+            <nav class="topnav__links" aria-label="Primary navigation">
+                <a href="#welcome">Welcome</a>
+                <a href="#login">Login</a>
+                <a href="#explore">Home</a>
+                <a href="#menu">Explore</a>
+                <a href="#cart">My Orders</a>
+            </nav>
+
+            <a class="btn btn--orange" href="#login">Login</a>
+            <button class="navToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+        </div>
+
+        <!-- mobile dropdown -->
+        <div class="mobileNav" aria-hidden="true">
+            <a href="#welcome">Welcome</a>
+            <a href="#login">Login</a>
+            <a href="#explore">Home</a>
+            <a href="#menu">Explore</a>
+            <a href="#cart">My Orders</a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- SCREEN 1: WELCOME / LANDING -->
+        <section class="welcome" id="welcome">
+            <div class="welcome__image">
+                <!-- export from figma -->
+                <img src="assests/images/Welcome.png" alt="Family enjoying Nigerian meals">
+            </div>
+
+            <div class="welcome__content">
+                <div class="welcome__top">
+                    <h2 class="brandScript">Moyin Kitchen</h2>
+                    <a class="btn btn--outlineBlue" href="#login">Sign In</a>
+                </div>
+
+                <div class="welcome__main">
+                    <h1>Your Authentic Taste of Nigeria</h1>
+                    <p class="muted">
+                        Experience homemade flavors delivered fresh to your desk or home.
+                        We bring the rich culinary heritage of Nigeria right to your doorstep.
+                    </p>
+
+                    <div class="features">
+                        <div class="feature">
+                            <div class="iconBox">🍴</div><span>Freshly Prepared</span>
+                        </div>
+                        <div class="feature">
+                            <div class="iconBox">🤝</div><span>Support Local Business</span>
+                        </div>
+                        <div class="feature">
+                            <div class="iconBox">🚚</div><span>Fast &amp; Reliable Delivery</span>
+                        </div>
+                    </div>
+
+                    <a class="btn btn--orange btn--full" href="#explore">Start Your Order</a>
+                    <a class="btn btn--outlineBlue btn--full" href="#promo">Learn More About Us</a>
+                </div>
+
+                <div class="miniFooter">
+                    © 2026 Moyin Kitchen.
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SCREEN 2: LOGIN -->
+        <section class="auth" id="login">
+            <div class="auth__left">
+                <img class="auth__bg" src="assests/images/Welcome.png" alt="Nigerian meals" />
+                <div class="auth__overlay"></div>
+
+                <div class="auth__leftContent">
+                    <h2>Moyin Kitchen</h2>
+                    <p>
+                        Your journey to delicious, authentic Nigerian meals starts here.
+                        Sign up or log in to order your favorites today!
+                    </p>
+                </div>
+            </div>
+
+            <div class="auth__right">
+                <div class="auth__card">
+                    <div class="brandScript auth__brand">Chuks Kitchen</div>
+                    <h2 class="auth__title">Login your Account</h2>
+
+                    <form class="form" onsubmit="return false;">
+                        <label class="label" for="email">Email or phone number</label>
+                        <div class="inputGroup">
+                            <span class="icon">✉️</span>
+                            <input id="email" type="text" placeholder="name@gmail.com" />
+                        </div>
+
+                        <label class="label" for="password">Password</label>
+                        <div class="inputGroup">
+                            <span class="icon">🔒</span>
+                            <input id="password" type="password" placeholder="******" />
+                            <button class="eyeBtn" type="button" aria-label="Show password">👁️</button>
+                        </div>
+
+                        <div class="row">
+                            <a class="link" href="#">Forgot Password?</a>
+                        </div>
+
+                        <button class="btn btn--orange btn--full" type="button">Continue</button>
+
+                        <div class="divider"><span>Or continue with</span></div>
+
+                        <button class="socialBtn" type="button"><span class="socialIcon">G</span>Continue with
+                            Google</button>
+                        <button class="socialBtn" type="button"><span class="socialIcon"></span>Continue with
+                            Apple</button>
+
+                        <p class="bottomText">
+                            Don’t have an account? <a class="link" href="#">Create an account</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SCREEN 3: HOME / EXPLORE (featured meals + categories + specials + promo) -->
+        <section class="explore" id="explore">
+            <div class="heroBanner">
+                <img class="heroBanner__img" src="assests/images/Home_Screen.png" alt="Nigerian meals on a table" />
+                <div class="heroBanner__overlay"></div>
+
+                <div class="container heroBanner__content">
+                    <h1>The Heart of Nigerian Home Cooking</h1>
+                    <p>Handcrafted with passion, delivered with care.</p>
+                    <a class="btn btn--orange" href="#promo">Discover what’s new</a>
+                </div>
+            </div>
+
+
+
+            <div class="container searchWrap">
+                <div class="searchBar">
+                    <span class="searchIcon">🔍</span>
+                    <input type="text" placeholder="What are you craving for today?" />
+                </div>
+            </div>
+
+            <div class="container sectionBlock">
+                <h2 class="sectionTitle">Popular Categories</h2>
+
+                <div class="categoryGrid">
+                    <article class="catCard">
+                        <img src="assests/images/Jollof.png" alt="Jollof Delights" />
+                        <p>Jollof Delights</p>
+                    </article>
+                    <article class="catCard">
+                        <img src="assests/images/Swallow.png" alt="Swallow & Soups" />
+                        <p>Swallow &amp; Soups</p>
+                    </article>
+                    <article class="catCard">
+                        <img src="assests/images/BBG & Grills.png" alt="Grills & BBQ" />
+                        <p>Grills &amp; BBQ</p>
+                    </article>
+                    <article class="catCard">
+                        <img src="assests/images/Sweet Treats.png" alt="Sweet Treats" />
+                        <p>Sweet Treats</p>
+                    </article>
+                </div>
+            </div>
+
+            <div class="container sectionBlock">
+                <h2 class="sectionTitle">Chef's Specials</h2>
+
+                <div class="mealsGrid">
+                    <article class="mealCard">
+                        <img class="mealCard__img" src="assests/images/Tilapia Pepper soup.png"
+                            alt="Spicy Tilapia Pepper Soup" />
+                        <div class="mealCard__body">
+                            <h3>Spicy Tilapia Pepper Soup</h3>
+                            <p>A comforting and spicy soup with tender tilapia fish.</p>
+                            <div class="mealCard__bottom">
+                                <span class="price">₦3,500</span>
+                                <button class="btn btn--small btn--orange" type="button">Add to cart</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="mealCard">
+                        <img class="mealCard__img" src="assests/images/Jollof.png" alt="Jollof Rice & Fried Chicken" />
+                        <div class="mealCard__body">
+                            <h3>Jollof Rice &amp; Fried Chicken</h3>
+                            <p>Signature jollof rice served with succulent fried chicken.</p>
+                            <div class="mealCard__bottom">
+                                <span class="price">₦3,500</span>
+                                <button class="btn btn--small btn--orange" type="button">Add to cart</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="mealCard">
+                        <img class="mealCard__img" src="assests/images/Egusi soup.png" alt="Egusi Soup & Pounded Yam" />
+                        <div class="mealCard__body">
+                            <h3>Egusi Soup &amp; Pounded Yam</h3>
+                            <p>Rich and savory egusi soup paired with pounded yam.</p>
+                            <div class="mealCard__bottom">
+                                <span class="price">₦3,500</span>
+                                <button class="btn btn--small btn--orange" type="button">Add to cart</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <section class="promo" id="promo">
+                <img class="promo__img" src="assests/images/Menu_Promo.png" alt="New menu additions" />
+                <div class="promo__fullscreen"></div>
+
+                <div class="container promo__content">
+                    <h2>Introducing Our New Menu Additions!</h2>
+                    <p>
+                        Explore exciting new dishes, crafted with the freshest ingredients and authentic Nigerian
+                        flavors.
+                        Limited time offer!
+                    </p>
+                    <a class="btn btn--orange" href="#menu">Discover what’s new</a>
+                </div>
+            </section>
+        </section>
+
+
+        <!-- SCREEN 4: MENU LISTING -->
+        <section class="menuPage" id="menu">
+            <div class="menuHero">
+                <img class="menuHero__img" src="assests/images/Nigeria Dishes.png" alt="Nigerian dishes" />
+                <div class="menuHero__fullscreen"></div>
+                <div class="container menuHero__content">
+                    <h1> Moyin Kitchen</h1>
+                    <p>Moyin Kitchen Nigerian Home Cooking 4.8 (1.2k)</p>
+                </div>
+            </div>
+
+            <div class="container menuLayout">
+                <aside class="sidebar" aria-label="Menu categories">
+                    <h3>Menu Categories</h3>
+                    <ul class="catList">
+                        <li class="active">Popular</li>
+                        <li>Swallow &amp; Soups</li>
+                    </ul>
+                </aside>
+
+                <div class="menuContent">
+                    <h2 class="menuSectionTitle">Popular</h2>
+                    <div class="foodGrid">
+                        <article class="foodCard">
+                            <img src="assests/images/Jollof.png" alt="Jollof Rice & Fried Chicken" />
+                            <div class="foodCard__body">
+                                <h3>Jollof Rice &amp; Fried Chicken</h3>
+                                <p>Signature jollof rice served with crispy fried chicken and plantain.</p>
+                                <div class="foodCard__bottom">
+                                    <span class="price">₦3,500</span>
+                                    <button class="addBtn" type="button" aria-label="Add to cart">+</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="foodCard">
+                            <img src="assests/images/Eba and Egusi soup.png" alt="Eba & Egusi Soup" />
+                            <div class="foodCard__body">
+                                <h3>Eba &amp; Egusi Soup (Goat Meat)</h3>
+                                <p>Hearty egusi soup with tender goat meat, served with soft eba.</p>
+                                <div class="foodCard__bottom">
+                                    <span class="price">₦3,500</span>
+                                    <button class="addBtn" type="button" aria-label="Add to cart">+</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="foodCard">
+                            <img src="assests/images/Pounded Yam & Edikaikong.png" alt="Pounded Yam & Edikaikong" />
+                            <div class="foodCard__body">
+                                <h3>Pounded Yam &amp; Edikaikong</h3>
+                                <p>Traditional pounded yam with rich, leafy edikaikong soup.</p>
+                                <div class="foodCard__bottom">
+                                    <span class="price">₦3,800</span>
+                                    <button class="addBtn" type="button" aria-label="Add to cart">+</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="foodCard">
+                            <img src="assests/images/Peppered snail.png" alt="Peppered Snail" />
+                            <div class="foodCard__body">
+                                <h3>Peppered Snail</h3>
+                                <p>Spicy and savory peppered snail, perfect as a starter.</p>
+                                <div class="foodCard__bottom">
+                                    <span class="price">₦2,500</span>
+                                    <button class="addBtn" type="button" aria-label="Add to cart">+</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="foodCard">
+                            <img src="assests/images/Grilled tilapia fish.png" alt="Grilled Tilapia Fish" />
+                            <div class="foodCard__body">
+                                <h3>Grilled Tilapia Fish</h3>
+                                <p>Whole grilled tilapia seasoned with our special spices.</p>
+                                <div class="foodCard__bottom">
+                                    <span class="price">₦4,500</span>
+                                    <button class="addBtn" type="button" aria-label="Add to cart">+</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="foodCard">
+                            <img src="assests/images/Fried rice and chicken.png" alt="Fried Rice and Chicken" />
+                            <div class="foodCard__body">
+                                <h3>Fried Rice and Chicken</h3>
+                                <p>Seasoned fried rice served with tender chicken pieces.</p>
+                                <div class="foodCard__bottom">
+                                    <span class="price">₦3,500</span>
+                                    <button class="addBtn" type="button" aria-label="Add to cart">+</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="menuContent">
+                        <h2 class="menuSectionTitle">Swallow &amp; Soups</h2>
+                        <div class="foodGrid">
+                            <article class="foodCard">
+                                <img src="assests/images/Amala and ewedu and gbegiri_.png"
+                                    alt="Amala with Gbegiri & Ewedu" />
+                                <div class="foodCard__body">
+                                    <h3>Amala with Gbegiri &amp; Ewedu</h3>
+                                    <p>Classic amala served with gbegiri (beans) and ewedu (jute leaf soup).
+                                    </p>
+                                    <div class="foodCard__bottom">
+                                        <span class="price">₦3,100</span>
+                                        <button class="addBtn" type="button" aria-label="Add to cart">+</button>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="foodCard">
+                                <img src="assests/images/Fufu and okra soup.png" alt="Fufu & Okra Soup (Fish)" />
+                                <div class="foodCard__body">
+                                    <h3>Fufu &amp; Okra Soup (Fish)</h3>
+                                    <p>Light fufu served with fresh okra soup and tilapia fish.</p>
+                                    <div class="foodCard__bottom">
+                                        <span class="price">₦3,300</span>
+                                        <button class="addBtn" type="button" aria-label="Add to cart">+</button>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="foodCard">
+                                <img src="assests/images/Nigerian Fufu & okra soup.png" alt="Fufu & Okra Soup (Fish)" />
+                                <div class="foodCard__body">
+                                    <h3>Fufu &amp; Okra Soup (Fish)</h3>
+                                    <p>Light fufu served with fresh okra soup and tilapia fish.</p>
+                                    <div class="foodCard__bottom">
+                                        <span class="price">₦3,500</span>
+                                        <button class="addBtn" type="button" aria-label="Add to cart">+</button>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <a class="linkBack" href="#cart">Go to Cart →</a>
+                    </div>
+                </div>
+        </section>
+
+
+        <!-- SCREEN 5: CART -->
+        <section class="cartPage" id="cart">
+            <div class="container cartWrap">
+                <h1 class="cartTitle">Your Cart</h1>
+
+                <div class="cartList">
+                    <article class="cartItem">
+                        <img class="cartItem__img" src="assests/images/Jollof.png" alt="Jollof Rice & Fried Chicken" />
+                        <div class="cartItem__info">
+                            <h3>Jollof Rice &amp; Fried Chicken</h3>
+                            <p>With plantain, extra pepper sauce</p>
+                        </div>
+                        <div class="cartItem__qty">
+                            <button class="qtyBtn plus" type="button" aria-label="Increase quantity">+</button>
+                            <span class="qtyValue">1</span>
+                            <button class="qtyBtn minus" type="button" aria-label="Decrease quantity">−</button>
+                        </div>
+                        <div class="cartItem__price">₦3,200</div>
+                        <button class="removeBtn" type="button" aria-label="Remove item">×</button>
+                    </article>
+
+                    <article class="cartItem">
+                        <img class="cartItem__img" src="assests/images/Eba and Egusi soup.png" alt="Egusi Meal" />
+                        <div class="cartItem__info">
+                            <h3>Eba &amp; Egusi Soup</h3>
+                            <p>With extra meat, pepper sauce</p>
+                        </div>
+                        <div class="cartItem__qty">
+                            <button class="qtyBtn plus" type="button">+</button>
+                            <span class="qtyValue">1</span>
+                            <button class="qtyBtn minus" type="button">−</button>
+                        </div>
+                        <div class="cartItem__price">₦3,200</div>
+                        <button class="removeBtn" type="button">×</button>
+                    </article>
+                </div>
+
+                <a class="addMore" href="#menu">+ Add more items from Moyin Kitchen</a>
+            </div>
+        </section>
+
+
+        <!-- SHARED FOOTER -->
+        <footer class="siteFooter" id="footer">
+            <div class="container footerGrid">
+                <div>
+                    <div class="brandScript footerBrand">Moyin Kitchen</div>
+                    <p class="footerText">
+                        Bringing the authentic flavors of Nigerian home cooking to your table, with passion and care.
+                    </p>
+                    <small class="footerSmall">© 2026 Moyin Kitchen. All rights reserved.</small>
+                </div>
+
+                <div>
+                    <h4 class="footerTitle">Quick Links</h4>
+                    <a href="#welcome">Home</a>
+                    <a href="#menu">Explore</a>
+                    <a href="#cart">My Order</a>
+                    <a href="#login">Account</a>
+                    <a href="#footer">Contact</a>
+                </div>
+
+                <div>
+                    <h4 class="footerTitle">Contact Us</h4>
+                    <p class="footerText">+234 9064615971</p>
+                    <p class="footerText">hello@moyinoluwaezekiel72@gmail.com</p>
+                    <p class="footerText">Unity street, ifo, Ogun State,Nigeria</p>
+                </div>
+
+                <div>
+                    <h4 class="footerTitle">Social</h4>
+                    <p class="footerText">Facebook</p>
+                    <p class="footerText">Twitter</p>
+                    <p class="footerText">LinkedIn</p>
+                    <p class="footerText">Instagram</p>
+                </div>
+            </div>
+
+            <button class="toTop" type="button" aria-label="Back to top">↑</button>
+        </footer>
+
+    </main>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
