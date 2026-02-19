@@ -10,7 +10,7 @@
 
 <body>
 
-    <!-- GLOBAL TOP NAV (reused across screens) -->
+    <!-- GLOBAL TOP NAV -->
     <header class="topnav">
         <div class="container topnav__inner">
             <a class="brandLogo" href="#welcome">Moyin Kitchen</a>
@@ -20,7 +20,7 @@
                 <a href="#login">Login</a>
                 <a href="#explore">Home</a>
                 <a href="#menu">Explore</a>
-                <a href="#cart">My Orders</a>
+                <a href="#cart">My Orders (<span class="cartCount">0</span>)</a>
             </nav>
 
             <a class="btn btn--orange" href="#login">Login</a>
@@ -33,16 +33,15 @@
             <a href="#login">Login</a>
             <a href="#explore">Home</a>
             <a href="#menu">Explore</a>
-            <a href="#cart">My Orders</a>
+            <a href="#cart">My Orders (<span class="cartCount">0</span>)</a>
         </div>
     </header>
 
     <main>
 
-        <!-- SCREEN 1: WELCOME / LANDING -->
+        <!-- SCREEN 1: WELCOME -->
         <section class="welcome" id="welcome">
             <div class="welcome__image">
-                <!-- export from figma -->
                 <img src="assets/images/Welcome.png" alt="Family enjoying Nigerian meals">
             </div>
 
@@ -126,10 +125,12 @@
 
                         <div class="divider"><span>Or continue with</span></div>
 
-                        <button class="socialBtn" type="button"><span class="socialIcon">G</span>Continue with
-                            Google</button>
-                        <button class="socialBtn" type="button"><span class="socialIcon"></span>Continue with
-                            Apple</button>
+                        <button class="socialBtn" type="button">
+                            <span class="socialIcon">G</span>Continue with Google
+                        </button>
+                        <button class="socialBtn" type="button">
+                            <span class="socialIcon"></span>Continue with Apple
+                        </button>
 
                         <p class="bottomText">
                             Don’t have an account? <a class="link" href="#">Create an account</a>
@@ -140,7 +141,7 @@
         </section>
 
 
-        <!-- SCREEN 3: HOME / EXPLORE (featured meals + categories + specials + promo) -->
+        <!-- SCREEN 3: HOME / EXPLORE -->
         <section class="explore" id="explore">
             <div class="heroBanner">
                 <img class="heroBanner__img" src="assets/images/Home_Screen.png" alt="Nigerian meals on a table" />
@@ -152,8 +153,6 @@
                     <a class="btn btn--orange" href="#promo">Discover what’s new</a>
                 </div>
             </div>
-
-
 
             <div class="container searchWrap">
                 <div class="searchBar">
@@ -228,9 +227,10 @@
                 </div>
             </div>
 
+            <!-- PROMO -->
             <section class="promo" id="promo">
                 <img class="promo__img" src="assets/images/Menu_Promo.png" alt="New menu additions" />
-                <div class="promo__fullscreen"></div>
+                <div class="promo__overlay"></div>
 
                 <div class="container promo__content">
                     <h2>Introducing Our New Menu Additions!</h2>
@@ -249,9 +249,10 @@
         <section class="menuPage" id="menu">
             <div class="menuHero">
                 <img class="menuHero__img" src="assets/images/Nigeria Dishes.png" alt="Nigerian dishes" />
-                <div class="menuHero__fullscreen"></div>
+                <div class="menuHero__overlay"></div>
+
                 <div class="container menuHero__content">
-                    <h1> Moyin Kitchen</h1>
+                    <h1>Moyin Kitchen</h1>
                     <p>Moyin Kitchen Nigerian Home Cooking 4.8 (1.2k)</p>
                 </div>
             </div>
@@ -267,6 +268,7 @@
 
                 <div class="menuContent">
                     <h2 class="menuSectionTitle">Popular</h2>
+
                     <div class="foodGrid">
                         <article class="foodCard">
                             <img src="assets/images/Jollof.png" alt="Jollof Rice & Fried Chicken" />
@@ -327,6 +329,7 @@
                                 </div>
                             </div>
                         </article>
+
                         <article class="foodCard">
                             <img src="assets/images/Fried rice and chicken.png" alt="Fried Rice and Chicken" />
                             <div class="foodCard__body">
@@ -340,89 +343,68 @@
                         </article>
                     </div>
 
-                    <div class="menuContent">
-                        <h2 class="menuSectionTitle">Swallow &amp; Soups</h2>
-                        <div class="foodGrid">
-                            <article class="foodCard">
-                                <img src="assets/images/Amala and ewedu and gbegiri_.png"
-                                    alt="Amala with Gbegiri & Ewedu" />
-                                <div class="foodCard__body">
-                                    <h3>Amala with Gbegiri &amp; Ewedu</h3>
-                                    <p>Classic amala served with gbegiri (beans) and ewedu (jute leaf soup).
-                                    </p>
-                                    <div class="foodCard__bottom">
-                                        <span class="price">₦3,100</span>
-                                        <button class="addBtn" type="button" aria-label="Add to cart">+</button>
-                                    </div>
-                                </div>
-                            </article>
+                    <h2 class="menuSectionTitle">Swallow &amp; Soups</h2>
 
-                            <article class="foodCard">
-                                <img src="assets/images/Fufu and okra soup.png" alt="Fufu & Okra Soup (Fish)" />
-                                <div class="foodCard__body">
-                                    <h3>Fufu &amp; Okra Soup (Fish)</h3>
-                                    <p>Light fufu served with fresh okra soup and tilapia fish.</p>
-                                    <div class="foodCard__bottom">
-                                        <span class="price">₦3,300</span>
-                                        <button class="addBtn" type="button" aria-label="Add to cart">+</button>
-                                    </div>
+                    <div class="foodGrid">
+                        <article class="foodCard">
+                            <img src="assets/images/Amala and ewedu and gbegiri_.png"
+                                alt="Amala with Gbegiri & Ewedu" />
+                            <div class="foodCard__body">
+                                <h3>Amala with Gbegiri &amp; Ewedu</h3>
+                                <p>Classic amala served with gbegiri (beans) and ewedu (jute leaf soup).</p>
+                                <div class="foodCard__bottom">
+                                    <span class="price">₦3,100</span>
+                                    <button class="addBtn" type="button" aria-label="Add to cart">+</button>
                                 </div>
-                            </article>
+                            </div>
+                        </article>
 
-                            <article class="foodCard">
-                                <img src="assets/images/Nigerian Fufu & okra soup.png" alt="Fufu & Okra Soup (Fish)" />
-                                <div class="foodCard__body">
-                                    <h3>Fufu &amp; Okra Soup (Fish)</h3>
-                                    <p>Light fufu served with fresh okra soup and tilapia fish.</p>
-                                    <div class="foodCard__bottom">
-                                        <span class="price">₦3,500</span>
-                                        <button class="addBtn" type="button" aria-label="Add to cart">+</button>
-                                    </div>
+                        <article class="foodCard">
+                            <img src="assets/images/Fufu and okra soup.png" alt="Fufu & Okra Soup (Fish)" />
+                            <div class="foodCard__body">
+                                <h3>Fufu &amp; Okra Soup (Fish)</h3>
+                                <p>Light fufu served with fresh okra soup and tilapia fish.</p>
+                                <div class="foodCard__bottom">
+                                    <span class="price">₦3,300</span>
+                                    <button class="addBtn" type="button" aria-label="Add to cart">+</button>
                                 </div>
-                            </article>
-                        </div>
+                            </div>
+                        </article>
 
-                        <a class="linkBack" href="#cart">Go to Cart →</a>
+                        <article class="foodCard">
+                            <img src="assets/images/Nigerian Fufu & okra soup.png" alt="Fufu & Okra Soup (Fish)" />
+                            <div class="foodCard__body">
+                                <h3>Fufu &amp; Okra Soup (Fish)</h3>
+                                <p>Light fufu served with fresh okra soup and tilapia fish.</p>
+                                <div class="foodCard__bottom">
+                                    <span class="price">₦3,500</span>
+                                    <button class="addBtn" type="button" aria-label="Add to cart">+</button>
+                                </div>
+                            </div>
+                        </article>
                     </div>
+
+                    <a class="linkBack" href="#cart">Go to Cart →</a>
                 </div>
+            </div>
         </section>
 
 
-        <!-- SCREEN 5: CART -->
+        <!-- SCREEN 5: CART (DYNAMIC) -->
         <section class="cartPage" id="cart">
             <div class="container cartWrap">
                 <h1 class="cartTitle">Your Cart</h1>
 
-                <div class="cartList">
-                    <article class="cartItem">
-                        <img class="cartItem__img" src="assets/images/Jollof.png" alt="Jollof Rice & Fried Chicken" />
-                        <div class="cartItem__info">
-                            <h3>Jollof Rice &amp; Fried Chicken</h3>
-                            <p>With plantain, extra pepper sauce</p>
-                        </div>
-                        <div class="cartItem__qty">
-                            <button class="qtyBtn plus" type="button" aria-label="Increase quantity">+</button>
-                            <span class="qtyValue">1</span>
-                            <button class="qtyBtn minus" type="button" aria-label="Decrease quantity">−</button>
-                        </div>
-                        <div class="cartItem__price">₦3,200</div>
-                        <button class="removeBtn" type="button" aria-label="Remove item">×</button>
-                    </article>
+                <!-- Dynamic cart items render here -->
+                <div class="cartList"></div>
 
-                    <article class="cartItem">
-                        <img class="cartItem__img" src="assets/images/Eba and Egusi soup.png" alt="Egusi Meal" />
-                        <div class="cartItem__info">
-                            <h3>Eba &amp; Egusi Soup</h3>
-                            <p>With extra meat, pepper sauce</p>
-                        </div>
-                        <div class="cartItem__qty">
-                            <button class="qtyBtn plus" type="button">+</button>
-                            <span class="qtyValue">1</span>
-                            <button class="qtyBtn minus" type="button">−</button>
-                        </div>
-                        <div class="cartItem__price">₦3,200</div>
-                        <button class="removeBtn" type="button">×</button>
-                    </article>
+                <!-- Summary -->
+                <div class="cartSummary">
+                    <p class="summaryLine">
+                        <span>Total</span>
+                        <strong class="cartTotal">₦0</strong>
+                    </p>
+                    <button class="btn btn--orange btn--full" type="button">Checkout</button>
                 </div>
 
                 <a class="addMore" href="#menu">+ Add more items from Moyin Kitchen</a>
@@ -430,7 +412,7 @@
         </section>
 
 
-        <!-- SHARED FOOTER -->
+        <!-- FOOTER -->
         <footer class="siteFooter" id="footer">
             <div class="container footerGrid">
                 <div>
@@ -454,7 +436,7 @@
                     <h4 class="footerTitle">Contact Us</h4>
                     <p class="footerText">+234 9064615971</p>
                     <p class="footerText">hello@moyinoluwaezekiel72@gmail.com</p>
-                    <p class="footerText">Unity street, ifo, Ogun State,Nigeria</p>
+                    <p class="footerText">Unity street, Ifo, Ogun State, Nigeria</p>
                 </div>
 
                 <div>
